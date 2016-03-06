@@ -41,7 +41,6 @@ defmodule GroupManager.Mixfile do
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["David Beck"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/dbeck/groupman_ex/",
-              "Docs" => "http://dbeck.github.io/groupman_ex/"}]
+     links: %{"GitHub" => "https://github.com/dbeck/groupman_ex/"}]
   end
 end
