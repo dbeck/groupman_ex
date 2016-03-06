@@ -4,7 +4,7 @@ defmodule GroupManager.Mixfile do
   def project do
     [
       app: :group_manager,
-      version: "0.0.7",
+      version: "0.0.8",
       elixir: "~> 1.0",
       build_embedded: Mix.env == :prod,
       start_permanent: Mix.env == :prod,
@@ -24,7 +24,7 @@ defmodule GroupManager.Mixfile do
   defp deps do
     [
       {:xxhash, git: "https://github.com/pierresforge/erlang-xxhash"},
-      {:chatter, "~> 0.0.12"}
+      {:chatter, "~> 0.0.14"}
     ]
   end
 
@@ -41,7 +41,7 @@ defmodule GroupManager.Mixfile do
      files: ["lib", "mix.exs", "README*", "LICENSE*"],
      maintainers: ["David Beck"],
      licenses: ["MIT"],
-     links: %{"GitHub" => "https://github.com/dbeck/groupman_ex/tree/0.0.7",
+     links: %{"GitHub" => "https://github.com/dbeck/groupman_ex/",
               "Docs" => "http://dbeck.github.io/groupman_ex/"}]
   end
 end

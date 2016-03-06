@@ -4,18 +4,14 @@ GroupManager
 GroupManager application is reponsible for maintaining group membership and
 topology information. The main module is [GroupManager](lib/group_manager.ex).
 
-The application is based on two core services. [Chatter](lib/group_manager/chatter.ex) is responsible for communication between peers. It favours UDP multicats over direct TCP communication. To decide what peer is accessible through multicast, it maintains an ETS database with the help of [PeerDB](lib/group_manager/chatter/peer_db.ex).
-
-When [Chatter](lib/group_manager/chatter.ex) broadcasts information it uses a
-logaithmic broadcast tree built randomly. The next step is to remove those
-nodes accessible on UDP multicast from the tree. Finally it sends a multicast message and starts the logarithmic broadcast too.
+The application is based on two core services. [Chatter](https://github.com/dbeck/chatter_ex) is responsible for communication between peers. It favours UDP multicats over direct TCP communication and discovers networked nodes automatically.
 
 The other main component is [TopologyDB](lib/group_manager/topology_db.ex) which maintains the list of groups and their topology in an ETS table.
 
 License
 =======
 
-Copyright (c) 2015 [David Beck](http://dbeck.github.io)
+Copyright (c) 2015-2016 [David Beck](http://dbeck.github.io)
 
 MIT License
 
